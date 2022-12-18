@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type To_doEntity {
+  ID: Float!
+  To_Do_Name: String!
+  To_Do_Date: DateTime!
+  To_Do_Time: DateTime!
+  Remark: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  ToDos: [To_doEntity!]!
+}
+
+type Mutation {
+  createToDo(data: To_doInput!): String!
+}
+
+input To_doInput {
+  To_Do_Name: String!
+  To_Do_Date: String!
+  To_Do_Time: String!
+  Remark: String!
+}
